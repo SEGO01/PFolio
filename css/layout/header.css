@@ -1,0 +1,116 @@
+.cabecera{
+    position:sticky;
+    top: 0;
+    z-index:1000;
+    background-color: var(--bg-transparency);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(50,60,80,0.45);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.35);
+}
+
+.navegacion-cabecera{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.contenedor-barra-texto h2{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text);
+    user-select: none;
+}
+
+.contenedor-barra-texto span{
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.navegacion-cabecera > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+} 
+
+.navegacion-cabecera a{
+    color: rgb(200,210,230);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: all 0.25s ease;
+    position: relative;
+    padding: 0.4rem 0;
+}
+
+.navegacion-cabecera a:hover,
+.navegacion-cabecera a:focus{
+    color: var(--primary);
+}
+
+.navegacion-cabecera a:hover::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: var(--primary);
+    transition: all 0.35s ease;
+    transform: translateX(-50%);
+}
+
+/*Estilo para Boton Iniciar Proyecto*/
+.navegacion-cabecera a[href="#"]:last-child,
+.navegacion-cabecera a:last-child{
+    background-color: var(--primary);
+    color: var(--bg);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px var(--primary-transparency);
+}
+
+.navegacion-cabecera a:last-child:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--primary-transparency);
+    background-color: var(--primary-hover);
+}
+
+/*Responsivo - moviles*/
+
+@media (max-width: 992px){
+    .navegacion-cabecera{
+        flex-direction: column;
+        padding: 1.2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .contenedor-barra-texto h2{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .navegacion-cabecera > div:last-child{
+        justify-content: center;
+        gap: 1.4rem
+    }
+
+    .navegacion-cabecera a:last-child{
+        margin-top: 0.6rem;
+    }
+
+    @media (max-width: 600px){
+        .navegacion-cabecera a{
+            font-size: 0.95rem;
+        }
+    }
+}

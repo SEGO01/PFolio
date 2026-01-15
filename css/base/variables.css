@@ -1,0 +1,14 @@
+:root{
+    --bg: rgb(17,23,34);
+    --bg-transparency:rgba(17,23,34, 0.8);
+    --surface: rgb(26,36,52);
+    --text: rgb(240,245,255);
+    --text-muted: rgb(160,180,220);
+    --primary: rgb(0,200,190);
+    --primary-transparency: rgba(0,200,190, 0.4);
+    --primary-hover: rgb(0,220,210);
+    --accent: rgb(100,220,255);
+    --success: rgb(50,215,130);
+    --warning: rgb(255,180,80);
+    --danger: rgb(255,90,120);
+}

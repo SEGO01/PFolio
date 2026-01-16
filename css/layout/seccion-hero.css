@@ -1,0 +1,134 @@
+.presentacion-equipo{
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 8rem 2rem 10rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-contenedor{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Dos columnas*/
+    align-items: center;
+    gap: 4rem;
+}
+
+/*Columna izq*/
+.hero-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.presentacion-titulo{
+    font-size: clamp(2.8rem, 4vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin: 0;
+    background: linear-gradient(90deg, var(--text), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+}
+
+.descripcion-equipo{
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: rgb(200,210,230);
+    max-width: 90%;
+    margin: 1rem 0;
+}
+
+.contenedor-botones-presentacion{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-primario,
+.btn-secundario{
+    padding: 1rem 2.2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primario{
+    background-color: var(--primary);
+    color: var(--bg);
+    box-shadow: 0 0 20px rgba(0, 200, 190, 0.35);
+}
+
+.btn-primario:hover{
+    background-color: var(--primary-transparency);
+    box-shadow: 0 0 30px rgba(0, 220, 210, 0.5);
+    background-color: rgb(200,220,210);
+}
+
+.btn-secundario{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secundario:hover{
+    background-color: var(--primary-transparency);
+    transform: translateY(-4px);
+}
+
+/*Columna Derecha*/
+
+.hero-imagen{
+    position: relative;
+}
+
+.imagen-hero{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    transform: perspective(1000px) rotateY(5deg);
+    transition: all 0.5s ease;
+}
+
+.imagen-hero:hover{
+    transform: perspective(1200px) rotateY(0deg) scale(1.03);
+    box-shadow: 0 30px 80px rgba(0,200,190,0.25);
+}
+
+/*Volverlo responsive(que se adapte a movil)*/
+
+@media (max-width: 992px){
+    .hero-contenedor{
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .hero-texto{
+        text-align: center;
+    }
+
+    .contenedor-botones-presentacion{
+        justify-content: center;
+    }
+
+    .presentacion-titulo{
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .imagen-hero{
+        transform: none;
+    }
+}
+
+@media (max-width: 600px){
+    .presentacion-equipo{
+        padding: 6rem 1.5rem 8rem;
+    }
+}

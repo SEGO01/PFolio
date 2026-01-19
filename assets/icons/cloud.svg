@@ -1,0 +1,10 @@
+<svg width="240" height="160" viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+  <path d="M60 110
+           Q40 110 40 90
+           Q40 70 65 70
+           Q70 45 100 45
+           Q130 45 135 70
+           Q160 70 160 90
+           Q160 110 140 110 Z"
+        fill="none" stroke="#1f8ef1" stroke-width="4"/>
+</svg>

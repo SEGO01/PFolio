@@ -1,0 +1,141 @@
+.seccion-workflow {
+  background-color: rgb(17, 23, 34);
+  color: rgb(240, 245, 255);
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-workflow {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.encabezado-workflow {
+  margin-bottom: 5rem;
+}
+
+.etiqueta-workflow {
+  display: inline-block;
+  background: rgba(0, 200, 190, 0.15);
+  color: rgb(0, 200, 190);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.encabezado-workflow h2 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1.5px;
+}
+
+/* Timeline horizontal */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, rgba(0, 200, 190, 0.3), rgb(0, 200, 190));
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Cada ítem del timeline */
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 25%;
+}
+
+.timeline-circle {
+  width: 80px;
+  height: 80px;
+  background: rgb(17, 23, 34);
+  border: 4px solid rgb(0, 200, 190);
+  color: rgb(0, 200, 190);
+  font-size: 2.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 0 25px rgba(0, 200, 190, 0.25);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover .timeline-circle {
+  transform: scale(1.15);
+  box-shadow: 0 0 40px rgba(0, 200, 190, 0.4);
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.8rem;
+  color: rgb(240, 245, 255);
+}
+
+.timeline-item p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgb(180, 190, 210);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .timeline {
+    flex-direction: column;
+    padding: 6rem 0;
+    gap: 4rem;
+  }
+
+  .timeline-line {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seccion-workflow {
+    padding: 6rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-circle {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+}
